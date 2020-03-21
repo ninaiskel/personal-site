@@ -6,15 +6,31 @@
   justify-content: center;
   padding: 60px 0;
 
+  @include breakpoint("small") {
+    display: block;
+    padding: 40px 20px;
+  }
+
   &__title {
     padding-right: 60px;
     font-size: 6rem;
     color: white;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    writing-mode: sideways-lr;
     text-align: right;
     color: $secondary;
     font-weight: bold;
+
+    @include breakpoint("medium") {
+      padding-right: 40px;
+    }
+
+    @include breakpoint("small") {
+      font-size: 5.4rem;
+      padding-right: 0;
+      margin-bottom: 20px;
+      text-align: left;
+      writing-mode: horizontal-tb;
+    }
 
     > span,
     p {
@@ -23,11 +39,17 @@
 
     span {
       font-size: 6rem;
+      @include breakpoint("small") {
+        font-size: 5.4rem;
+      }
     }
 
     p {
       margin-right: 10px;
       font-size: 5.4rem;
+      @include breakpoint("small") {
+        font-size: 4.5rem;
+      }
     }
   }
 
@@ -35,5 +57,14 @@
     padding-left: 100px;
     padding-bottom: 80px;
     max-width: 70%;
+
+    @include breakpoint("medium") {
+      padding-left: 40px;
+      max-width: 80%;
+    }
+    @include breakpoint("small") {
+      padding-left: 0;
+      max-width: 100%;
+    }
   }
 }
