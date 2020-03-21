@@ -1,0 +1,39 @@
+.about {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+
+  &__title {
+    padding-right: 60px;
+    font-size: 5.6rem;
+    color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    color: $secondary;
+    font-weight: bold;
+
+    > span,
+    p {
+      color: white;
+    }
+
+    span {
+      font-size: 5.6rem;
+    }
+
+    p {
+      margin-right: 10px;
+      font-size: 5.4rem;
+    }
+  }
+
+  &__description {
+    padding-left: 100px;
+    padding-bottom: 80px;
+    max-width: 70%;
+  }
+}

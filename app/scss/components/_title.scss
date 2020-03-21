@@ -1,0 +1,21 @@
+.title {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 40px;
+
+  &:after {
+    background-color: $primary;
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 40%;
+    left: 7px;
+    opacity: 1;
+    position: absolute;
+    width: calc(100% + 30px);
+    z-index: -1;
+  }
+}

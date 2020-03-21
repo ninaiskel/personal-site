@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  ul {
+    display: flex;
+  }
+
+  li > a {
+    padding: 10px 25px;
+    cursor: pointer;
+    color: white;
+    font-size: 2.8rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
