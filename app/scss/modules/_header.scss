@@ -1,9 +1,12 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 40px 60px;
   align-items: center;
   margin-bottom: 20px;
+  @include breakpoint("small") {
+    padding: 40px 20px;
+  }
 }
 
 .menu {
@@ -16,6 +19,11 @@
     cursor: pointer;
     color: white;
     font-size: 2.8rem;
+
+    @include breakpoint("small") {
+      font-size: 2.2rem;
+      padding: 10px 12px;
+    }
 
     &:hover {
       text-decoration: underline;

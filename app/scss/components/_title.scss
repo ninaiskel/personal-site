@@ -1,10 +1,10 @@
 .title {
-  font-size: 4rem;
   color: white;
-  position: relative;
-  z-index: 1;
   display: inline-block;
+  font-size: 4rem;
+  position: relative;
   margin-bottom: 40px;
+  z-index: 1;
 
   &:after {
     background-color: $primary;
