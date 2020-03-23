@@ -1,13 +1,24 @@
 // colors
 $primary: #7eb6b2;
 $secondary: #e9bb30;
-$dark-text: #484848;
+$third: #0a0e1a;
+$text: white;
 $shadow: rgba(0, 0, 0, 0.7);
 
-$background-dark: #343741;
-$background-dark-light: #141928;
-$background-light: #f4f5fa;
-$background-light-light: #fcf8f6;
+// $background: #343741;
+// $background-light: #141928;
+
+$theme-dark: (
+  "background": #343741,
+  "background-light": #141928,
+  "text": white
+);
+
+$theme-light: (
+  "background": #f0f2fb,
+  "background-light": #e0e3f5,
+  "text": #222735
+);
 
 // sizes
 

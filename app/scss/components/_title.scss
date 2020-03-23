@@ -19,3 +19,15 @@
     z-index: -1;
   }
 }
+
+html[data-theme="dark"] {
+  .title {
+    color: map-get($theme-dark, "text");
+  }
+}
+
+html[data-theme="light"] {
+  .title {
+    color: map-get($theme-light, "text");
+  }
+}

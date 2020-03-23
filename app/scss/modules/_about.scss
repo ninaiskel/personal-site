@@ -1,3 +1,17 @@
+html[data-theme="dark"] .about {
+  &__title span,
+  &__title p {
+    color: map-get($theme-dark, "text");
+  }
+}
+
+html[data-theme="light"] .about {
+  &__title span,
+  &__title p {
+    color: map-get($theme-light, "text");
+  }
+}
+
 .about {
   display: flex;
   max-width: 1024px;
@@ -14,7 +28,6 @@
   &__title {
     padding-right: 60px;
     font-size: 6rem;
-    color: white;
     writing-mode: sideways-lr;
     text-align: right;
     color: $secondary;
@@ -30,11 +43,6 @@
       margin-bottom: 30px;
       text-align: left;
       writing-mode: horizontal-tb;
-    }
-
-    > span,
-    p {
-      color: white;
     }
 
     span {

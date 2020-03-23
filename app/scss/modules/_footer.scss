@@ -35,3 +35,15 @@
     }
   }
 }
+
+html[data-theme="dark"] {
+  .contact-list svg {
+    fill: white;
+  }
+}
+
+html[data-theme="light"] {
+  .contact-list svg {
+    fill: map-get($theme-light, "text");
+  }
+}

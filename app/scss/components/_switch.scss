@@ -40,7 +40,7 @@
   }
 
   input:checked + label {
-    background: $background-dark-light;
+    background: $third;
   }
 
   input:checked + label:after {
