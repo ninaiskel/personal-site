@@ -3,27 +3,67 @@
   justify-content: space-between;
   padding: 40px 20px;
   align-items: center;
-  margin-bottom: 20px;
+
+  @include breakpoint("small") {
+    padding: 20px;
+  }
+
+  @include breakpoint("tiny") {
+    display: block;
+  }
 }
 
 .menu {
   ul {
     display: flex;
+    @include breakpoint("tiny") {
+      margin-top: 10px;
+    }
   }
 
   li > a {
-    padding: 10px 25px;
+    padding: 10px;
     cursor: pointer;
     color: white;
     font-size: 2.8rem;
+    margin-left: 20px;
 
     @include breakpoint("small") {
       font-size: 2.2rem;
-      padding: 10px 12px;
+      padding: 10px 4px;
+      margin-left: 10px;
+    }
+
+    @include breakpoint("tiny") {
+      padding: 8px 4px;
+      margin-left: 8px;
+      font-size: 2rem;
+    }
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+    &:after {
+      content: " ";
+      display: block;
+      height: 0;
+      left: 16px;
+      position: absolute;
+      width: calc(100% - 20px);
+      z-index: -1;
+      bottom: 6px;
+      background-color: $primary;
+      transition: height 0.4s linear;
     }
 
     &:hover {
-      text-decoration: underline;
+      &:after {
+        height: 30%;
+        opacity: 1;
+      }
     }
   }
 }
