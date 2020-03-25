@@ -25,6 +25,54 @@
 
   .project {
     background: grey;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+
+    &__content {
+      position: absolute;
+      opacity: 0;
+      bottom: 0;
+      padding: 20px;
+      transition: all 0.4s ease-in-out;
+
+      h2 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+      }
+
+      p,
+      a {
+        font-size: 1.9rem;
+        line-height: 2.1rem;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:hover {
+      will-change: transform;
+      transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+
+      .project__content {
+        opacity: 1;
+      }
+    }
+
     &--fourth {
       grid-column: 2;
       grid-row: 2 / 4;
