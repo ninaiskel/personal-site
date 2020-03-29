@@ -12,6 +12,12 @@
     margin-left: 0;
     padding: 40px 20px;
   }
+
+  p > a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .contact-list {
