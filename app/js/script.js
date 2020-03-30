@@ -1,17 +1,15 @@
-
 const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
-
-
 function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        
-    }    
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+toggleSwitch.addEventListener("change", switchTheme);
 
+// projects
+
+const projects = document.querySelectorAll(".project");
