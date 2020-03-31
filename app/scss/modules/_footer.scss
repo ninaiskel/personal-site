@@ -61,3 +61,21 @@ html[data-theme="light"] {
     fill: map-get($theme-light, "text");
   }
 }
+
+.variant {
+  margin: 0;
+  font-size: 3rem;
+  font-family: "Decovar Regular24";
+  color: $secondary;
+  font-variation-settings: "wght" 1000;
+  animation: load 4s infinite linear;
+}
+
+@keyframes load {
+  0% {
+    font-variation-settings: "wght" 1000;
+  }
+  50% {
+    font-variation-settings: "wght" 0;
+  }
+}
