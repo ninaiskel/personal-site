@@ -1,0 +1,56 @@
+.articles {
+  padding: 80px 20px;
+
+  @include breakpoint("small") {
+    display: block;
+    padding: 60px 20px;
+  }
+
+  .article {
+    margin-bottom: 2rem;
+
+    &:before {
+      content: "";
+      width: 2rem;
+      height: 1rem;
+      background: $secondary;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    a {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+
+      &:after {
+        content: " ";
+        display: block;
+        height: 0;
+        left: 16px;
+        position: absolute;
+        width: calc(100% - 20px);
+        z-index: -1;
+        bottom: 5px;
+        background-color: $secondary;
+        transition: height 0.4s linear;
+      }
+
+      &:hover {
+        &:after {
+          height: 25%;
+          opacity: 1;
+        }
+      }
+
+      small {
+        position: absolute;
+        display: block;
+        opacity: 0.6;
+        margin-top: 4px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
