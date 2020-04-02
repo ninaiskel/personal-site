@@ -19,36 +19,57 @@ html[data-theme="light"] .about {
   align-items: center;
   justify-content: center;
   padding: 60px 0;
+  height: 660px;
 
   @include breakpoint("small") {
     display: block;
     padding: 40px 20px;
+    height: auto;
   }
 
   &__title {
     padding-right: 60px;
     font-size: 6rem;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     text-align: right;
     color: $secondary;
     font-weight: bold;
 
+    @include breakpoint("large") {
+      font-size: 5.6rem;
+    }
+
     @include breakpoint("medium") {
       padding-right: 40px;
+      font-size: 5rem;
     }
 
     @include breakpoint("small") {
-      font-size: 4.2rem;
+      transform: rotate(0);
+      font-size: 4rem;
       padding-right: 0;
       margin-bottom: 30px;
       text-align: left;
       writing-mode: horizontal-tb;
     }
 
+    @include breakpoint("tiny") {
+      font-size: 3.8rem;
+    }
+
     span {
       font-size: 6rem;
+      @include breakpoint("medium") {
+        font-size: 5rem;
+      }
+
       @include breakpoint("small") {
         font-size: 4.2rem;
+      }
+
+      @include breakpoint("tiny") {
+        font-size: 3.8rem;
       }
     }
 

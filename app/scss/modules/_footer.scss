@@ -2,6 +2,11 @@
   width: 50%;
   margin-left: 6.5%;
   padding: 40px 0;
+
+  @include breakpoint("large") {
+    width: 60%;
+  }
+
   @include breakpoint("medium") {
     width: 70%;
     margin-left: 3%;
@@ -13,9 +18,14 @@
     padding: 40px 20px;
   }
 
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   p > a {
+    text-decoration: underline;
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }

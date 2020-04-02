@@ -6,6 +6,10 @@
   margin-bottom: 40px;
   z-index: 1;
 
+  @include breakpoint("small") {
+    font-size: 3rem;
+  }
+
   &:after {
     background-color: $primary;
     bottom: 0;
