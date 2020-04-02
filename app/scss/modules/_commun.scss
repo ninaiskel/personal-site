@@ -1,5 +1,27 @@
+.main {
+  height: 100%;
+}
+
+html[data-theme="dark"] .main {
+  // background: linear-gradient(to right, $background, $background-light);
+  background: linear-gradient(
+    to right,
+    map-get($theme-dark, "background"),
+    map-get($theme-dark, "background-light")
+  );
+}
+
+html[data-theme="light"] .main {
+  background: linear-gradient(
+    to right,
+    map-get($theme-light, "background"),
+    map-get($theme-light, "background-light")
+  );
+}
+
 .header,
 .projects,
+.articles,
 .footer {
   max-width: 90%;
   margin: 0 auto;
