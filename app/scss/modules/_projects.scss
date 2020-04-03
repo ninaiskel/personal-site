@@ -82,25 +82,25 @@
   }
 
   &--one {
-    background-image: url(/app/img/findfit.jpg);
+    background-image: url(../img/findfit.jpg);
   }
 
   &--two {
-    background-image: url(/app/img/flexgrid.JPG);
+    background-image: url(../img/flexgrid.JPG);
   }
 
   &--three {
-    background-image: url(/app/img/deaths.JPG);
+    background-image: url(../img/deaths.JPG);
   }
 
   &--fourth {
     grid-column: 2;
     grid-row: 2 / 4;
-    background-image: url(/app/img/troopstats.JPG);
+    background-image: url(../img/troopstats.JPG);
   }
 
   &--five {
-    background-image: url(/app/img/air-polution.JPG);
+    background-image: url(../img/air-polution.JPG);
   }
 }
 
