@@ -1,15 +1,14 @@
-const gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  sass = require('gulp-sass'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  cssnano = require('cssnano'),
-  sourcemaps = require('gulp-sourcemaps'),
+const gulp = require("gulp"),
+  concat = require("gulp-concat"),
+  uglify = require("gulp-uglify"),
+  sass = require("gulp-sass"),
+  postcss = require("gulp-postcss"),
+  autoprefixer = require("autoprefixer"),
+  cssnano = require("cssnano"),
+  sourcemaps = require("gulp-sourcemaps"),
   // watch = require('gulp-watch'),
-  connect = require('gulp-connect'),
-  browserSync = require('browser-sync').create();
-
+  connect = require("gulp-connect"),
+  browserSync = require("browser-sync").create();
 
 const paths = {
   styles: {
@@ -18,24 +17,27 @@ const paths = {
   }
 };
 
-gulp.task('minify', function () {
-  return gulp.src('app/js/*.js')
-    .pipe(concat('all.js'))
-    .pipe(uglify({
-      compress: {
-        drop_console: true
-      }
-    }))
-    .pipe(gulp.dest('build/js/'));
+gulp.task("minify", function() {
+  return gulp
+    .src("app/js/*.js")
+    .pipe(concat("all.js"))
+    .pipe(
+      uglify({
+        compress: {
+          drop_console: true
+        }
+      })
+    )
+    .pipe(gulp.dest("build/js/"));
 });
 
-gulp.task('watch-js', function () {
-  gulp.watch('app/js/*.js', ['minify'], function () {
-  });
+gulp.task("watch-js", function() {
+  gulp.watch("app/js/*.js", ["minify"], function() {});
 });
 
 function style() {
-  return gulp
+  return (
+    gulp
       .src(paths.styles.src)
       // Initialize sourcemaps before compilation starts
       .pipe(sourcemaps.init())
@@ -47,37 +49,33 @@ function style() {
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.styles.dest))
       // Add browsersync stream pipe after compilation
-      .pipe(browserSync.stream());
+      .pipe(browserSync.stream())
+  );
 }
 
 function reload() {
   browserSync.reload();
 }
 
-
 // Add browsersync initialization at the start of the watch task
 function watch() {
-  
   browserSync.init({
     // You can tell browserSync to use this directory and serve it as a mini-server
-    
-    server: {
-      baseDir: "./app"
-    }
 
+    server: {
+      baseDir: "./"
+    }
   });
   // gulp.watch(paths.styles.src, style);
-  gulp.watch('app/scss/*.scss');
+  gulp.watch("app/scss/*.scss");
 
-  gulp.watch("app/*.html", reload);
+  gulp.watch("*.html", reload);
 }
 
-
-exports.watch = watch
+exports.watch = watch;
 
 exports.style = style;
 var build = gulp.parallel(style, watch);
 
-gulp.task('build', build);
-gulp.task('default', build);
-
+gulp.task("build", build);
+gulp.task("default", build);
