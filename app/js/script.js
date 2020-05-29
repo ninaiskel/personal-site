@@ -10,14 +10,22 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener("change", switchTheme);
 
-// projects
+//animations
+const gaspAnimation = (id) =>
+  gsap.to(id, {
+    duration: 2,
+    ease: "bounce.out",
+    x: 0,
+  });
 
-// const container = document.querySelector(".container");
-// const project = document.querySelector(".project");
+gaspAnimation("#about-title");
 
-// const prespectiveProject = function(e) {
-//   console.log(project.offsetWidth, project.offsetHeight);
-//   console.log(e.clientX, e.clientY);
-// };
+function handleScroll() {
+  const { top } = document.querySelector("body").getBoundingClientRect();
 
-// project.addEventListener("mouseover", prespectiveProject);
+  if (top < -350) gaspAnimation("#projects-title");
+  if (top < -1970) gaspAnimation("#articles-title");
+  if (top < -2230) gaspAnimation("#contact-title");
+}
+
+document.addEventListener("scroll", handleScroll);

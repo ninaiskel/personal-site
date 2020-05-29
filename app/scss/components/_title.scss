@@ -5,6 +5,7 @@
   position: relative;
   margin-bottom: 40px;
   z-index: 1;
+  transform: translateX(1000px);
 
   @include breakpoint("small") {
     font-size: 3rem;
