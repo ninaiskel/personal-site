@@ -13,7 +13,7 @@ toggleSwitch.addEventListener("change", switchTheme);
 //animations
 const gaspAnimation = (id) =>
   gsap.to(id, {
-    duration: 2,
+    duration: 1.8,
     ease: "bounce.out",
     x: 0,
   });
@@ -24,8 +24,8 @@ function handleScroll() {
   const { top } = document.querySelector("body").getBoundingClientRect();
 
   if (top < -350) gaspAnimation("#projects-title");
-  if (top < -1970) gaspAnimation("#articles-title");
-  if (top < -2230) gaspAnimation("#contact-title");
+  if (top < -1900) gaspAnimation("#articles-title");
+  if (top < -2200) gaspAnimation("#contact-title");
 }
 
 document.addEventListener("scroll", handleScroll);
