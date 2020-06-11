@@ -5,9 +5,11 @@
   position: relative;
   margin-bottom: 40px;
   z-index: 1;
-  transform: translateX(4200px);
+  transform: translateX(4000px);
+
   @include breakpoint("small") {
     font-size: 3rem;
+    transform: translateX(0);
   }
 
   &:after {

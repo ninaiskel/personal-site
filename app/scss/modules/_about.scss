@@ -75,6 +75,7 @@ html[data-theme="light"] .about {
 
     p {
       margin-right: 10px;
+
       font-size: 5.4rem;
       @include breakpoint("small") {
         font-size: 4.2rem;
@@ -87,6 +88,10 @@ html[data-theme="light"] .about {
     padding-left: 100px;
     padding-bottom: 80px;
     max-width: 70%;
+
+    p {
+      margin-bottom: 10px;
+    }
 
     @include breakpoint("medium") {
       padding-left: 40px;
