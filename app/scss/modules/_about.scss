@@ -75,7 +75,7 @@ html[data-theme="light"] .about {
 
     p {
       margin-right: 10px;
-
+      line-height: 5rem;
       font-size: 5.4rem;
       @include breakpoint("small") {
         font-size: 4.2rem;
